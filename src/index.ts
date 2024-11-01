@@ -1,22 +1,12 @@
-import { Hero } from "./classes/Hero";
-import { genericFunction, genericFunctionArrow, printObject } from "./generics/generics";
-import { Villain } from "./interfaces";
+import { getPokemon } from './generics/get-pokemon';
 
 
 
 
+getPokemon(4)
+    .then( pokemon => console.log( pokemon ) )
+    .catch( error => console.error( error ) )
+    .finally( () => console.log('Fin de getPokemon')  )
 
 
 
-// const name: string = 'Fernando'
-// console.log( genericFunctionArrow(3.14324).toFixed(2) )
-// console.log( genericFunctionArrow(name).toUpperCase() )
-// console.log( genericFunctionArrow( new Date() ).getDate() )
-
-const deadpool = {
-    name: 'Deadpool',
-    realName: 'Wade Winston Wilson',
-    dangerLevel: 130
-}
-
-console.log( genericFunctionArrow<Villain>(deadpool) )
